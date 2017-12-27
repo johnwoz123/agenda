@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "main": "index.js",
   "devDependencies": {
-    "serverless-jest-plugin": "^0.1.6"
+    "chai": "^4.1.2",
+    "jest": "^22.0.4",
+    "serverless-jest-plugin": "^0.1.6",
+    "serverless-mocha-plugin": "^1.7.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "jest": "jest"
   },
   "author": "john wozniak",
   "license": "ISC",
@@ -18,6 +21,7 @@
     "serverless-dynamodb-local": "^0.2.26",
     "serverless-http": "^1.5.2",
     "serverless-offline": "^3.16.0",
+    "should": "^13.1.3",
     "uuid": "^3.1.0"
   }
 }

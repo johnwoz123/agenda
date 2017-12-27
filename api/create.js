@@ -2,6 +2,7 @@ const uuid = require('uuid');
 const dynamodb = require('../config/dynamodb');
 
 module.exports.handler = (event, context, cb) => {
+    console.log(event);
     const timestamp = new Date().getTime();
     const data = JSON.parse(event.body);
     if (typeof data.text !== 'string') {
@@ -13,7 +14,6 @@ module.exports.handler = (event, context, cb) => {
         });
         return;
     }
-
     const params = {
         TableName: process.env.TABLE_AGENDA,
         Item: {

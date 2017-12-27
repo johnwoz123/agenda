@@ -1,11 +1,11 @@
 plugins:
   - serverless-dynamodb-local
   - serverless-offline
-  - serverless-jest-plugin
+
 
 service:
   name: Agenda
-  description: "Basic todo app that I called angenda because its 'different' as two chains would say"
+  description: "Basic todo app that I called agenda because its 'different' as two chains would say"
 
 ####################
 ## Custom Configs ##
@@ -35,7 +35,6 @@ custom:
       test:
         sources:
           - table: ${self:custom.TABLE_AGENDA}
-            sources: [./__tests__/dynamodb/agenda_table.json]
 
 provider:
   name: aws
